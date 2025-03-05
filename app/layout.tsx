@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Welcome to Reshan's portfolio. I am a Software Engineer specializing in full-stack development, web applications, and modern technologies. Explore my projects and skills.",
   keywords: [
-    "Reshan",
+    "Reshan Wijerathna",
     "Software Engineer",
     "Portfolio",
     "Full-Stack Developer",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "PHP",
     "Next.js",
     "JavaScript",
-    "TypeScript",
+    "Vuejs",
   ],
   authors: [{ name: "Reshan Wijerathna", url: "https://reshan.dev" }],
   openGraph: {
