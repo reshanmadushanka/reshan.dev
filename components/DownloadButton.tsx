@@ -14,6 +14,10 @@ export default function DownloadButton() {
     document.body.removeChild(link);
   }
 
+  if (typeof window === "undefined") {
+    return null;
+  }
+
   return (
     <a onClick={handleClick}>
       <MagicButton
