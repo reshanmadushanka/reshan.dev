@@ -2,7 +2,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
-import DownloadButton from "./DownloadButton";
 
 const Footer = () => {
   return (
@@ -55,9 +54,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="basis-128">
-            <DownloadButton />
-          </div>
+          <div className="basis-128"></div>
         </div>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
