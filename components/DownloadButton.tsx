@@ -1,32 +1,31 @@
-"use client"; // This directive marks the component as a Client Component
+"use client";
 
+import dynamic from "next/dynamic";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 
-export default function DownloadButton() {
-  function handleClick() {
-    if (typeof document !== "undefined") {
-      const pdfUrl = "/documents/ReshanWijerathna.pdf";
-      const link = document.createElement("a");
-      link.href = pdfUrl;
-      link.download = "Reshan Wijerathna.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
-  }
-
-  if (typeof document === "undefined") {
-    return null;
-  }
+const DownloadButton = () => {
+  const handleClick = () => {
+    const pdfUrl = "/documents/ReshanWijerathna.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Reshan Wijerathna.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
-    <a onClick={handleClick}>
+    <div onClick={handleClick}>
       <MagicButton
         title="Download CV"
         icon={<FaLocationArrow />}
         position="right"
       />
-    </a>
+    </div>
   );
-}
+};
+
+export default dynamic(() => Promise.resolve(DownloadButton), {
+  ssr: false,
+});
