@@ -5,16 +5,18 @@ import MagicButton from "./MagicButton";
 
 export default function DownloadButton() {
   function handleClick() {
-    const pdfUrl = "/documents/ReshanWijerathna.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Reshan Wijerathna.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    if (typeof document !== "undefined") {
+      const pdfUrl = "/documents/ReshanWijerathna.pdf";
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = "Reshan Wijerathna.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   }
 
-  if (typeof window === "undefined") {
+  if (typeof document === "undefined") {
     return null;
   }
 
