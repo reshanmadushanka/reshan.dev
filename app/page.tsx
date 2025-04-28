@@ -17,7 +17,7 @@ export default function Home() {
         <TimelineWork />
         <Experience />
         <Clients />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </main>
   );
