@@ -6,7 +6,7 @@ import { ButtonsCard } from "./ui/tailwindcss-buttons";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-20" id="home">
+    <div className="" id="home">
       <div>
         <Spotlight
           className="top-40 -left-10`md:-left-32 md:-top-20 h-screen"
