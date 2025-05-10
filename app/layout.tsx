@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Analytics from "@/components/Analytics";
 
 import "./globals.css";
 import { ThemeProvider } from "@/app/providor";
@@ -68,6 +69,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

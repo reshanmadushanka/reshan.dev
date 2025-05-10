@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <img
-            src="/profile.jpeg"
+            src="/profile2.jpg"
             alt="Your Name"
             className="w-32 h-32 rounded-full mx-auto shadow-lg p-5"
           ></img>

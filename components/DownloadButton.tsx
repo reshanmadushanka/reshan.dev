@@ -6,7 +6,7 @@ import MagicButton from "./MagicButton";
 export default function DownloadButton() {
   function handleClick() {
     if (typeof window !== "undefined") {
-      const pdfUrl = "/documents/ReshanWijerathna.pdf";
+      const pdfUrl = "/documents/Reshan Wijerathna CV.pdf";
       const link = document.createElement("a");
       link.href = pdfUrl;
       link.download = "Reshan Wijerathna.pdf";
@@ -17,12 +17,12 @@ export default function DownloadButton() {
   }
 
   return (
-    <button onClick={handleClick} type="button">
+    <a onClick={handleClick} type="button">
       <MagicButton
         title="Download CV"
         icon={<FaLocationArrow />}
         position="right"
       />
-    </button>
+    </a>
   );
 }

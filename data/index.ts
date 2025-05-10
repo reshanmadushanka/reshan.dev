@@ -11,7 +11,7 @@ export const gridItems = [
   {
     id: 1,
     title:
-      "Experienced Software Engineer with over seven years in web development, specializing in PHP. Proficient in Laravel, Vue.js, and other modern technologies",
+      "Experienced Software Engineer with over eight years in web development, specializing in PHP. Proficient in Laravel, Vue.js, and other modern technologies",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -89,10 +89,31 @@ export const projects = [
 export const testimonials = [
   {
     quote:
+      "I had the pleasure of managing Reshan during his time at Adventus.io, and he was a dedicated and disciplined developer. His passion for technology and eagerness to learn were evident in his work, as he consistently took the initiative to improve his skills and contribute effectively to the team. Reshan approached challenges with a problem-solving mindset and delivered quality work. His discipline and commitment made him a reliable team member, and I have no doubt he will continue to grow and succeed in his career. I highly recommend him for any future opportunities.",
+    name: "Pramitha Samarakoon",
+    title: "Project Manager at Velou",
+    image: "/pramitha.jpeg",
+  },
+  {
+    quote:
+      "Reshan was in my squad as a software engineer mainly focused on PHP, JavaScript and Laravel Framework, and he did a great job in both backend and frontend work. He is a quick learner, solves problems well, and works hard to deliver good results. He is also a good team player and easy to work with. I highly recommend him!",
+    name: "Lasantha Sudeera Sanjeewa",
+    title: "Fullstack Engineer at Giftbee ",
+    image: "/lasantha.jpeg",
+  },
+  {
+    quote:
       "Reshan is exceptional at his job. He has great interpersonal skills, works well with clients, and always goes the extra mile to support his colleagues. His dedication to getting things done efficiently makes him a valuable asset to any team. I highly recommend him for any organization seeking a reliable and skilled professional.",
     name: "Chaminda Chanaka",
     title: "Software Engineer | Fullstack Developer",
     image: "/chanaka.jpeg",
+  },
+  {
+    quote:
+      "Reshan has been working with me for Several Companies together. He is very energetic and skillfull person who accept challanges and working on tuff situation very calmly. Always open for opinions and has a good team spirit for coloborating with collegues. Have postive vibe always and make surronding more pleasent for others as well. Willing to learn technical stuff so badly and update others as well when in free time. Focus on productivity and perfection always. I wish Reshan a good future on his career life.",
+    name: "Damitha Dahanayaka Athukorala",
+    title: "Developer",
+    image: "/damitha.jpeg",
   },
   {
     quote:
