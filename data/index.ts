@@ -1,10 +1,30 @@
+
 export const navItems = [
-  { name: "Home", link: "#home" },
-  { name: "About", link: "#about" },
-  { name: "Journey", link: "#timeline" },
-  // { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  {
+    name: "Home",
+    link: "#home",
+    icon: "IconHome", // Just pass the component reference
+  },
+  {
+    name: "About",
+    link: "#about",
+    icon: "IconUser",
+  },
+  {
+    name: "Journey",
+    link: "#timeline",
+    icon: "ImAccessibility",
+  },
+  {
+    name: "Testimonials",
+    link: "#testimonials",
+    icon: "ImSmile",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+    icon: "ImBook",
+  },
 ];
 
 export const gridItems = [

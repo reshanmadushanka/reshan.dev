@@ -6,7 +6,7 @@ import DownloadButton from "./DownloadButton";
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-10 mb-[100px] md:mb-5" id="contact">
+    <footer className="w-full pt-10 mb-[100px] md:mb-5 sm:pt-2" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[60vw]">
           Looking for a{" "}
