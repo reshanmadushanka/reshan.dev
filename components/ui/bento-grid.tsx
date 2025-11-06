@@ -2,9 +2,13 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/data/confetti.json";
-import Lottie from "react-lottie";
+const Lottie = dynamic(() => import("react-lottie"), {
+  ssr: false,
+  loading: () => <div>Loading animation...</div>,
+});
 import MagicButton from "../MagicButton";
 
 export const BentoGrid = ({
