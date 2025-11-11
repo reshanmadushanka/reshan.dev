@@ -1,0 +1,90 @@
+.layout {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background: white;
+  padding: 0 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.headerContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.contentLayout {
+  display: flex;
+  gap: 0;
+}
+
+.sider {
+  background: white;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+.welcome {
+  background: white;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h2 {
+  margin: 0 0 16px 0;
+  color: #1890ff;
+  font-size: 28px;
+}
+
+.welcome p {
+  margin: 0 0 24px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.infoBox {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 4px;
+  border-left: 4px solid #1890ff;
+}
+
+.infoBox p {
+  margin: 8px 0;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .welcome {
+    padding: 16px;
+  }
+
+  .welcome h2 {
+    font-size: 20px;
+  }
+}

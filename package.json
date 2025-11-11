@@ -10,6 +10,9 @@
   "dependencies": {
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@tabler/icons-react": "^3.29.0",
+    "@ant-design/v5-patch-for-react-19": "^1.0.2",
+    "antd": "^5.13.0",
+    "axios": "^1.6.5",
     "clsx": "^2.1.1",
     "icons-react": "^3.7.1",
     "mini-svg-data-uri": "^1.4.4",
