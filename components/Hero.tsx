@@ -30,11 +30,14 @@ const Hero = () => {
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <img
             src="/profile2.jpg"
-            alt="Your Name"
+            alt="Profile photo of Reshan Wijerathna"
             className="w-32 h-32 rounded-full mx-auto shadow-lg p-5"
-          ></img>
+          />
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
+            Reshan Wijerathna — Senior Software Engineer in Dubai
+          </h1>
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Laravel|Vuejs|NextJs|PHP|React
+            Laravel | Vue.js | Next.js | PHP | React
           </h2>
           <TextGenerateEffect
             className="text-center text-3xl md:text-5xl lg:text-6xl"
