@@ -34,7 +34,7 @@ const Hero = () => {
             className="w-32 h-32 rounded-full mx-auto shadow-lg p-5"
           />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-4">
-            Reshan Wijerathna — Senior Software Engineer in Dubai
+            Reshan Wijerathna
           </h1>
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Laravel | Vue.js | Next.js | PHP | React
