@@ -37,7 +37,7 @@ const Hero = () => {
             Laravel|Vuejs|NextJs|PHP|React
           </h2>
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-3xl md:text-5xl lg:text-6xl"
             words="Experienced Software Engineer with 8+ Years"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">

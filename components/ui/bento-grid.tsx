@@ -108,7 +108,7 @@ export const BentoGridItem = ({
           {title}
         </div>
         {id === 3 && (
-          <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-1">
+          <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 md:-right-3 lg:-right-1 top-0">
             {/* tech stack lists */}
             <div className="flex flex-col gap-3 md:gap-3 lg:gap-6">
               {leftLists.map((item, i) => (

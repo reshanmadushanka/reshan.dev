@@ -16,7 +16,7 @@ function TimelineWork() {
             Stripe API, Docker, AWS, Nest.js.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Implemented functinalities of student recruitment platform
+            Implemented functionalities of student recruitment platform
             facilitate seamless interactions between institutions and
             recruitment agents.
           </p>
@@ -29,7 +29,7 @@ function TimelineWork() {
               reports (Follow-ups, To-dos)
             </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Converted UIs which are impelemented using Laravel Backpack to
+              ✅ Converted UIs which are implemented using Laravel Backpack to
               Vue.js
             </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
@@ -63,7 +63,7 @@ function TimelineWork() {
             Google Maps API, Zoom API, Vimeo API.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-6">
-            Implemented functinalities of learning management software and
+            Implemented functionalities of learning management software and
             online baby store.
           </p>
           <div className="mb-6">
@@ -105,7 +105,7 @@ function TimelineWork() {
           </p>
           <div className="mb-6">
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Implemented functinalities of online gift shop
+              ✅ Implemented functionalities of online gift shop
             </div>
             <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
               ✅ Developed the front-end interface with React.js, focusing on a
