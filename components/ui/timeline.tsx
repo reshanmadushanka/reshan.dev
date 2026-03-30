@@ -37,7 +37,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     <div className="w-full bg-gray-950 font-sans md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-5 px-4 md:px-8 lg:px-10">
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Adventus.io for the past 3 years.
+          I have over 10 years of experience in software engineering.
           Here&apos;s a timeline of my journey.
         </p>
       </div>

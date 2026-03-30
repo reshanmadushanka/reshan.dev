@@ -5,11 +5,54 @@ function TimelineWork() {
   const data = [
     {
       id: "1",
-      title: "2022-present",
+      title: "2025-Present",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-bold mb-4">
-            Adventus.io - Senior Software Engineer
+            D3 MAVEN - Senior Software Engineer | Dubai, Downtown
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
+            Technologies Used: Laravel, Vue.js, MySQL, Stripe API.
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            Currently serving as a Senior Software Engineer my role involves
+            leading end-to-end development lifecycles, from initial system
+            design to the deployment of complex, high-performance features. By
+            integrating modern frameworks with cutting-edge AI-driven
+            development workflows, I ensure the delivery of robust, maintainable
+            code while mentoring team members on best practices in architecture
+            and security.
+          </p>
+          <div className="mb-6">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Developed a full-scale job portal for the automobile industry,
+              featuring a integrated wallet and job credit system.
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Completed an online service provider platform with a
+              subscription module, approval workflows, and Stripe integration.
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Implemented the front-end and registration/payment flows for an
+              event and venue rental site with Stripe payments.
+            </div>
+          </div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            AI & Productivity: Actively leveraging AI agents and advanced tools
+            including Codex, Gemini, and Qoder to optimize development workflows
+            and code quality.
+          </p>
+          <div className="grid grid-cols-2 gap-4"></div>
+        </div>
+      ),
+    },
+    {
+      id: "2",
+      title: "2022 - 2025",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-bold mb-4">
+            Adventus.io - Senior Software Engineer | Victoria Australia
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             Technologies Used: Laravel (Lucid Architecture), Vue.js, MySQL,
@@ -51,12 +94,12 @@ function TimelineWork() {
       ),
     },
     {
-      id: "2",
+      id: "3",
       title: "2020 - 2022",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-bold mb-4">
-            Web Choice Online Pty Ltd - Senior Software Engineer
+            Web Choice Online Pty Ltd - Senior Software Engineer | Kew, Australia
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             Technologies Used: Laravel, Vue.js, MySQL, cPanel, Stripe API,
@@ -93,12 +136,12 @@ function TimelineWork() {
       ),
     },
     {
-      id: "3",
+      id: "4",
       title: "2019 - 2020",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-bold mb-4">
-            Concon Solution - Software Engineer
+            Concon Solution - Software Engineer | Kotte, Colombo
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             Technologies Used: Laravel, React.js, MySQL
@@ -130,12 +173,12 @@ function TimelineWork() {
       ),
     },
     {
-      id: "4",
+      id: "5",
       title: "2016 - 2019",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-bold mb-4">
-            Redomini (Pvt.) Ltd. - Software Engineer
+            Redomini (Pvt.) Ltd. - Software Engineer | Nugegoda, Colombo
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             Technologies Used: Laravel, CodeIgniter, jQuery, MySQL
@@ -160,12 +203,12 @@ function TimelineWork() {
       ),
     },
     {
-      id: "5",
+      id: "6",
       title: "2015 - 2016",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-bold mb-4">
-            Ceylon Linux - Associate Software Engineer
+            Ceylon Linux - Associate Software Engineer | Colombo
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-base font-semibold mb-4">
             Technologies Used: Java, CodeIgniter, jQuery, MySQL
