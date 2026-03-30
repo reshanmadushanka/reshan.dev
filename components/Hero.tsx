@@ -42,7 +42,7 @@ const Hero = () => {
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Reshan Wijerathna, a Senior Software Engineer based in
-            Sri Lanka.
+            Dubai, Downtown.
           </p>
           <a href="#about">
             <ButtonsCard>Show My Experience</ButtonsCard>

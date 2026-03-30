@@ -4,7 +4,7 @@ import { Timeline } from "./ui/timeline";
 function TimelineWork() {
   const data = [
     {
-      id: "1",
+      id: "work-1",
       title: "2025-Present",
       content: (
         <div>
@@ -47,7 +47,7 @@ function TimelineWork() {
       ),
     },
     {
-      id: "2",
+      id: "work-2",
       title: "2022 - 2025",
       content: (
         <div>
@@ -94,7 +94,7 @@ function TimelineWork() {
       ),
     },
     {
-      id: "3",
+      id: "work-3",
       title: "2020 - 2022",
       content: (
         <div>
@@ -136,7 +136,7 @@ function TimelineWork() {
       ),
     },
     {
-      id: "4",
+      id: "work-4",
       title: "2019 - 2020",
       content: (
         <div>
@@ -173,7 +173,7 @@ function TimelineWork() {
       ),
     },
     {
-      id: "5",
+      id: "work-5",
       title: "2016 - 2019",
       content: (
         <div>
@@ -203,7 +203,7 @@ function TimelineWork() {
       ),
     },
     {
-      id: "6",
+      id: "work-6",
       title: "2015 - 2016",
       content: (
         <div>
