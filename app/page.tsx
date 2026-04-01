@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import { FloatingNav } from "../components/ui/floating-navbar";
 import Grid from "../components/Grid";
+import Skills from "@/components/Skills";
 import Clients from "../components/Clients";
 import Experience from "@/components/Experience";
 import TimelineWork from "../components/Timeline";
@@ -9,6 +10,7 @@ import {
   IconHome,
   IconCar,
   IconUser,
+  IconCode,
   IconMessageStar,
   IconAddressBook,
 } from "@tabler/icons-react";
@@ -22,6 +24,11 @@ const navItems = [
     name: "About",
     link: "#about",
     icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
+    name: "Skills",
+    link: "#skills",
+    icon: <IconCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Journey",
@@ -50,7 +57,7 @@ export default function Home() {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
+        <Skills />
         <TimelineWork />
         <Experience />
         <Clients />

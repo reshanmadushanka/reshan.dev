@@ -6,7 +6,7 @@ import { ButtonsCard } from "./ui/tailwindcss-buttons";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-20" id="home">
+    <div className="pb-0 pt-20" id="home">
       <div>
         <Spotlight
           className="top-40 -left-10`md:-left-32 md:-top-20 h-screen"
@@ -44,7 +44,7 @@ const Hero = () => {
             words="Experienced Software Engineer with 10+ Years"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Reshan Wijerathna, a Senior Software Engineer 
+            Hi! I&apos;m Reshan Wijerathna, a Senior Software Engineer </p>
           <a href="#about">
             <ButtonsCard>Show My Experience</ButtonsCard>
           </a>
