@@ -4,6 +4,7 @@ import Grid from "../components/Grid";
 import Skills from "@/components/Skills";
 import Clients from "../components/Clients";
 import Experience from "@/components/Experience";
+import RecentProjects from "@/components/RecentProjects";
 import TimelineWork from "../components/Timeline";
 import Footer from "@/components/Footer";
 import {
@@ -43,6 +44,11 @@ const navItems = [
     ),
   },
   {
+    name: "Projects",
+    link: "#projects",
+    icon: <IconCode className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
     name: "Contact",
     link: "#contact",
     icon: (
@@ -60,6 +66,7 @@ export default function Home() {
         <Skills />
         <TimelineWork />
         <Experience />
+        <RecentProjects />
         <Clients />
         <Footer />
       </div>
