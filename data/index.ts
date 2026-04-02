@@ -82,10 +82,10 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Learning Management System",
-    des: "A comprehensive LMS built for educational institutions to manage courses, students, and certifications efficiently.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    title: "GarageMate Vehicle Management System",
+    des: "A comprehensive vehicle management system for garages, providing features like vehicle tracking, service history, and customer management.",
+    img: "/garagemate.png",
+    iconLists: ["/vue.svg", "/tail.svg", "/ts.svg", "/laravel.svg"],
     link: "https://webchoiceonline.com.au",
   },
 ];
