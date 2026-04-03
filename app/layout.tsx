@@ -15,11 +15,10 @@ export const metadata: Metadata = {
     template: "%s | Reshan.dev",
   },
   description:
-    "Reshan Wijerathna is a Senior Software Engineer in Dubai specializing in Laravel, Vue.js, Next.js, React, PHP, and full-stack web applications.",
+    "Reshan Wijerathna is a Senior Software Engineer specializing in Laravel, Vue.js, Next.js, React, PHP, and full-stack web applications.",
   keywords: [
     "Reshan Wijerathna",
     "Senior Software Engineer",
-    "Dubai Software Engineer",
     "Laravel Developer",
     "Vue.js Developer",
     "Next.js Developer",
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Reshan Wijerathna | Senior Software Engineer",
     description:
-      "Senior Software Engineer in Dubai building modern web experiences with Laravel, Vue.js, Next.js, React and PHP.",
+      "Senior Software Engineer building modern web experiences with Laravel, Vue.js, Next.js, React and PHP.",
     url: "https://reshan.dev",
     siteName: "Reshan.dev",
     images: [
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Reshan Wijerathna | Senior Software Engineer",
     description:
-      "Senior Software Engineer in Dubai building modern web experiences with Laravel, Vue.js, Next.js, React and PHP.",
+      "Senior Software Engineer building modern web experiences with Laravel, Vue.js, Next.js, React and PHP.",
     images: ["https://reshan.dev/profile.jpeg"],
   },
   alternates: {
@@ -90,7 +89,7 @@ export default function RootLayout({
                   "url": "https://reshan.dev",
                   "name": "Reshan's Portfolio",
                   "description":
-                    "Senior Software Engineer in Dubai building modern web applications with Laravel, Vue.js, Next.js, React and PHP.",
+                    "Senior Software Engineer building modern web applications with Laravel, Vue.js, Next.js, React and PHP.",
                 },
                 {
                   "@type": "Person",
