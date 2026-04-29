@@ -86,7 +86,7 @@ export const projects = [
     des: "A comprehensive vehicle management system for garages, providing features like vehicle tracking, service history, and customer management.",
     img: "/garagemate.png",
     iconLists: ["/vue.svg", "/tail.svg", "/ts.svg", "/laravel.svg"],
-    link: "https://webchoiceonline.com.au",
+    link: "https://garage.reshan.dev",
   },
 ];
 
