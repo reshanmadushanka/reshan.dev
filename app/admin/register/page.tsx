@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Form, Input, Button, Card, message, Spin } from 'antd';
 import { LockOutlined, UserOutlined, MailOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/navigation';
-import { authAPI } from '@/lib/api/client';
+import { authAPI } from '@/lib/api/auth.api';
 import styles from './register.module.css';
 
 export default function AdminRegisterPage() {

@@ -1,9 +1,15 @@
 "use client";
 
 import { IconCode } from "@tabler/icons-react";
-import { skillSections } from "@/data";
+import { useSkills } from "@/lib/hooks/useSkills";
 
 const Skills = () => {
+  const { skills, isLoading } = useSkills();
+
+  if (isLoading) {
+    return <div className="py-20 text-center">Loading skills...</div>;
+  }
+
   return (
     <section id="skills" className="relative py-16 sm:py-20">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.14),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.08),transparent_30%)]" />
@@ -43,7 +49,7 @@ const Skills = () => {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {skillSections.map((section) => (
+          {skills.map((section) => (
             <article
               key={section.title}
               className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-[#070B1F] p-5 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30"

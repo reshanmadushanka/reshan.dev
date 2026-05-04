@@ -3,34 +3,18 @@
 import { useState } from 'react';
 import { Form, Input, Button, Card, message, Spin } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import { useRouter } from 'next/navigation';
-import { authAPI } from '@/lib/api/client';
+import { useAuth } from '@/lib/hooks/useAuth';
 import styles from './login.module.css';
 
 export default function AdminLoginPage() {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
-  const router = useRouter();
+  const { login } = useAuth();
 
   const onFinish = async (values: { email: string; password: string }) => {
     setLoading(true);
-    try {
-      const response = await authAPI.login(values.email, values.password);
-      const { access_token, user } = response.data;
-
-      // Store token in localStorage
-      localStorage.setItem('admin_token', access_token);
-      localStorage.setItem('admin_user', JSON.stringify(user));
-
-      message.success(`Welcome back, ${user.email}!`);
-      router.push('/admin/dashboard');
-    } catch (error: any) {
-      message.error(
-        error.response?.data?.message || 'Login failed. Please try again.'
-      );
-    } finally {
-      setLoading(false);
-    }
+    await login(values.email, values.password);
+    setLoading(false);
   };
 
   return (
@@ -82,10 +66,6 @@ export default function AdminLoginPage() {
                 Login
               </Button>
             </Form.Item>
-
-            <div className={styles.footer}>
-              Don't have an account? <a href="/admin/register">Register here</a>
-            </div>
           </Form>
         </Spin>
       </Card>

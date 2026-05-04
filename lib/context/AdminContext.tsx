@@ -1,5 +1,9 @@
 'use client';
 
+// Context + Provider Pattern
+// Single Responsibility: manages global auth session state only.
+// All components read auth state from here via useAdmin() hook.
+
 import {
   createContext,
   useContext,
@@ -7,13 +11,7 @@ import {
   ReactNode,
   useEffect,
 } from 'react';
-
-interface AdminUser {
-  id: string;
-  email: string;
-  name: string;
-  role: string;
-}
+import type { AdminUser } from '@/lib/types/auth.types';
 
 interface AdminContextType {
   admin: AdminUser | null;
@@ -32,7 +30,7 @@ export function AdminProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Load from localStorage on mount
+    // Restore session from localStorage on mount
     const storedToken = localStorage.getItem('admin_token');
     const storedAdmin = localStorage.getItem('admin_user');
 

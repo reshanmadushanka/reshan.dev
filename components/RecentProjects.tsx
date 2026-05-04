@@ -1,10 +1,16 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-import { projects } from "@/data";
+import { useProjects } from "@/lib/hooks/useProjects";
 import { PinContainer } from "./ui/3d-pin";
 
 const RecentProjects = () => {
+  const { projects, isLoading } = useProjects();
+
+  if (isLoading) {
+    return <div className="py-20 text-center">Loading projects...</div>;
+  }
+
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">

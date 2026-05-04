@@ -1,6 +1,9 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+// Dashboard page — reads session from NextAuth (not localStorage)
+// Middleware already blocks unauthenticated users — no manual redirect needed here
+
+import { useState } from 'react';
 import { Layout, Menu, Button, Drawer, Space, Badge, Avatar, message } from 'antd';
 import {
   LogoutOutlined,
@@ -8,43 +11,26 @@ import {
   MenuOutlined,
   CloseOutlined,
 } from '@ant-design/icons';
-import { useRouter } from 'next/navigation';
+import { useAuth } from '@/lib/hooks/useAuth';
 import styles from './dashboard.module.css';
 
 const { Header, Sider, Content } = Layout;
 
 export default function AdminDashboard() {
-  const [admin, setAdmin] = useState<any>(null);
+  const { user, logout, isLoading } = useAuth();
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
-  const router = useRouter();
 
-  useEffect(() => {
-    const adminData = localStorage.getItem('admin_user');
-    const token = localStorage.getItem('admin_token');
-
-    if (!token || !adminData) {
-      router.push('/admin/login');
-      return;
-    }
-
-    try {
-      setAdmin(JSON.parse(adminData));
-    } catch (error) {
-      router.push('/admin/login');
-    }
-  }, [router]);
-
-  const handleLogout = () => {
-    localStorage.removeItem('admin_token');
-    localStorage.removeItem('admin_user');
-    message.success('Logged out successfully');
-    router.push('/admin/login');
+  const handleLogout = async () => {
+    await logout();
   };
 
-  if (!admin) {
+  // Middleware handles redirect — this is just a loading state
+  if (isLoading) {
     return <div>Loading...</div>;
   }
+
+  const email = user?.email ?? '';
 
   const menuItems = [
     {
@@ -59,19 +45,18 @@ export default function AdminDashboard() {
       <Header className={styles.header}>
         <div className={styles.headerContent}>
           <Space>
-            {window.innerWidth <= 768 && (
-              <Button
-                type="text"
-                icon={<MenuOutlined />}
-                onClick={() => setDrawerVisible(true)}
-              />
-            )}
+            <Button
+              type="text"
+              icon={<MenuOutlined />}
+              onClick={() => setDrawerVisible(true)}
+              className={styles.mobileMenuBtn}
+            />
             <h1 className={styles.logo}>Admin Panel</h1>
           </Space>
 
           <Space>
-            <Badge status="success" text={`${admin.email} (Admin)`} />
-            <Avatar>{admin.email.charAt(0).toUpperCase()}</Avatar>
+            <Badge status="success" text={`${email} (Admin)`} />
+            <Avatar>{email.charAt(0).toUpperCase()}</Avatar>
             <Button
               type="primary"
               danger
@@ -85,34 +70,34 @@ export default function AdminDashboard() {
       </Header>
 
       <Layout className={styles.contentLayout}>
-        {window.innerWidth > 768 ? (
-          <Sider
-            theme="light"
-            collapsed={collapsed}
-            onCollapse={setCollapsed}
-            className={styles.sider}
-          >
-            <Menu mode="inline" items={menuItems} />
-          </Sider>
-        ) : (
-          <Drawer
-            title="Menu"
-            placement="left"
-            onClose={() => setDrawerVisible(false)}
-            open={drawerVisible}
-            closeIcon={<CloseOutlined />}
-          >
-            <Menu mode="vertical" items={menuItems} />
-          </Drawer>
-        )}
+        <Sider
+          theme="light"
+          collapsed={collapsed}
+          onCollapse={setCollapsed}
+          className={styles.sider}
+          breakpoint="md"
+          collapsedWidth={0}
+        >
+          <Menu mode="inline" items={menuItems} />
+        </Sider>
+
+        <Drawer
+          title="Menu"
+          placement="left"
+          onClose={() => setDrawerVisible(false)}
+          open={drawerVisible}
+          closeIcon={<CloseOutlined />}
+        >
+          <Menu mode="vertical" items={menuItems} />
+        </Drawer>
 
         <Content className={styles.content}>
           <div className={styles.welcome}>
-            <h2>Welcome, {admin.email}!</h2>
+            <h2>Welcome, {email}!</h2>
             <p>You are successfully logged in to the admin panel.</p>
             <div className={styles.infoBox}>
               <p>
-                <strong>Email:</strong> {admin.email}
+                <strong>Email:</strong> {email}
               </p>
               <p>
                 <strong>Role:</strong> Admin
