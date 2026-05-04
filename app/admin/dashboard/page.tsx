@@ -70,8 +70,8 @@ export default function AdminDashboard() {
           </Space>
 
           <Space>
-            <Badge status="success" text={`${admin.name} (${admin.role})`} />
-            <Avatar>{admin.name.charAt(0).toUpperCase()}</Avatar>
+            <Badge status="success" text={`${admin.email} (Admin)`} />
+            <Avatar>{admin.email.charAt(0).toUpperCase()}</Avatar>
             <Button
               type="primary"
               danger
@@ -108,14 +108,14 @@ export default function AdminDashboard() {
 
         <Content className={styles.content}>
           <div className={styles.welcome}>
-            <h2>Welcome, {admin.name}!</h2>
+            <h2>Welcome, {admin.email}!</h2>
             <p>You are successfully logged in to the admin panel.</p>
             <div className={styles.infoBox}>
               <p>
                 <strong>Email:</strong> {admin.email}
               </p>
               <p>
-                <strong>Role:</strong> {admin.role}
+                <strong>Role:</strong> Admin
               </p>
             </div>
           </div>

@@ -16,13 +16,13 @@ export default function AdminLoginPage() {
     setLoading(true);
     try {
       const response = await authAPI.login(values.email, values.password);
-      const { access_token, admin } = response.data;
+      const { access_token, user } = response.data;
 
       // Store token in localStorage
       localStorage.setItem('admin_token', access_token);
-      localStorage.setItem('admin_user', JSON.stringify(admin));
+      localStorage.setItem('admin_user', JSON.stringify(user));
 
-      message.success(`Welcome back, ${admin.name}!`);
+      message.success(`Welcome back, ${user.email}!`);
       router.push('/admin/dashboard');
     } catch (error: any) {
       message.error(
