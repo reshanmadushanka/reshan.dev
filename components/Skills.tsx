@@ -51,25 +51,25 @@ const Skills = () => {
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {skills.map((section) => (
             <article
-              key={section.title}
+              key={section.name}
               className="group relative overflow-hidden rounded-3xl border border-white/[0.08] bg-[#070B1F] p-5 shadow-lg shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30"
             >
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent opacity-60" />
               <div className="mb-4 flex items-start justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-semibold text-white">
-                    {section.title}
+                    {section.name}
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-white/60">
                     {section.description}
                   </p>
                 </div>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.04] px-3 py-2 text-[10px] uppercase tracking-[0.25em] text-cyan-300/80">
-                  {section.items.length}
+                  {section.id}
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-2">
+              {/* <div className="flex flex-wrap gap-2">
                 {section.items.map((item) => (
                   <span
                     key={item}
@@ -78,7 +78,7 @@ const Skills = () => {
                     {item}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </article>
           ))}
         </div>

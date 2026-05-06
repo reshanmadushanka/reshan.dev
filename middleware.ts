@@ -9,7 +9,7 @@ export default auth((req) => {
   const isLoggedIn = !!req.auth;
   const { pathname } = req.nextUrl;
 
-  const isProtectedRoute = pathname.startsWith('/admin/dashboard');
+  const isProtectedRoute = pathname.startsWith('/admin') && pathname !== '/admin/login';
   const isLoginPage = pathname === '/admin/login';
 
   // Block unauthenticated users from protected pages

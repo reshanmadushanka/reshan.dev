@@ -10,7 +10,9 @@ import {
   DashboardOutlined,
   MenuOutlined,
   CloseOutlined,
+  BulbOutlined,
 } from '@ant-design/icons';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '@/lib/hooks/useAuth';
 import styles from './dashboard.module.css';
 
@@ -20,6 +22,7 @@ export default function AdminDashboard() {
   const { user, logout, isLoading } = useAuth();
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
+  const router = useRouter();
 
   const handleLogout = async () => {
     await logout();
@@ -34,11 +37,21 @@ export default function AdminDashboard() {
 
   const menuItems = [
     {
-      key: '1',
+      key: '/admin/dashboard',
       icon: <DashboardOutlined />,
       label: 'Dashboard',
     },
+    {
+      key: '/admin/skills',
+      icon: <BulbOutlined />,
+      label: 'Skills',
+    },
   ];
+
+  const handleMenuClick = ({ key }: { key: string }) => {
+    router.push(key);
+    setDrawerVisible(false);
+  };
 
   return (
     <Layout className={styles.layout}>
@@ -78,7 +91,12 @@ export default function AdminDashboard() {
           breakpoint="md"
           collapsedWidth={0}
         >
-          <Menu mode="inline" items={menuItems} />
+          <Menu 
+            mode="inline" 
+            items={menuItems} 
+            onClick={handleMenuClick}
+            selectedKeys={[typeof window !== 'undefined' ? window.location.pathname : '/admin/dashboard']}
+          />
         </Sider>
 
         <Drawer
@@ -88,7 +106,12 @@ export default function AdminDashboard() {
           open={drawerVisible}
           closeIcon={<CloseOutlined />}
         >
-          <Menu mode="vertical" items={menuItems} />
+          <Menu 
+            mode="vertical" 
+            items={menuItems} 
+            onClick={handleMenuClick}
+            selectedKeys={[typeof window !== 'undefined' ? window.location.pathname : '/admin/dashboard']}
+          />
         </Drawer>
 
         <Content className={styles.content}>
